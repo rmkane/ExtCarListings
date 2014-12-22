@@ -1,0 +1,21 @@
+/* Add your own styles here. */
+
+.car-details {
+	padding: 20px;
+}
+
+.make-image {
+	width: 96px;
+	height: 96px;
+}
+
+.car-field-label {
+    font-weight: bold;
+}
+
+.car-image {
+	float: right;
+	width: 250px;
+}
+
+.mousepointer { cursor: pointer; }
