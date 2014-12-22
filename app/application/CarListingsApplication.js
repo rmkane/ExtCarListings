@@ -11,8 +11,14 @@ Ext.define("CarListingApp.application.CarListingsApplication", {
 
     getInjectorConfig : function() {
         return Ext.apply(this.callParent(arguments), {
-            carDataStore: "CarListingApp.store.CarDataStore",
-            carChartStore: "CarListingApp.store.CarChartStore",
+            carDataStore: {
+				className : "CarListingApp.store.CarDataStore",
+				singleton : false
+			},
+            carChartStore: {
+				className : "CarListingApp.store.CarChartStore",
+				singleton : false
+			}
         });
     }
 });

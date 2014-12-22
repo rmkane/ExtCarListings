@@ -3,7 +3,9 @@
  */
 Ext.define("CarListingApp.application.Application", {
     extend: "Deft.mvc.Application",
-    requires: [ "CarListingApp.config.AppConfig",
+    requires: [ "CarListingApp.GlobalUtils",
+		"CarListingApp.application.ApplicationDependencies",
+		"CarListingApp.config.AppConfig",
         "CarListingApp.view.Viewport" ],
 
 	config : {
