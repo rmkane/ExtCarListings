@@ -1,6 +1,8 @@
-SEE: https://github.com/deftjs/Examples
-
 # CarListingApp: A DeftJS Example Application
+
+## Preamble
+
+This application is an extension of the [Car Listings](https://github.com/SenchaArchitect/CarListings) by GitHub user [philstrong](https://github.com/philstrong). The original application did not use IoC, so I added Deft JS into the application by following the [Pheonix Application](https://github.com/deftjs/Examples/tree/master/phoenix-example-app) by GitHub user [brian428](https://github.com/brian428).
 
 ## Introduction
 
