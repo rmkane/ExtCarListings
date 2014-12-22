@@ -5,7 +5,7 @@ Ext.define('CarListingApp.view.CarListings', {
     extend: 'Ext.panel.Panel',
     alias: 'widget.carListings',
     controller: "CarListingApp.controller.CarListingsController",
-    inject: ["carDataStore", "carChartStore"],
+    inject: ["globalUtils", "carDataStore", "carChartStore"],
     requires: [
         'Ext.XTemplate',
         'Ext.chart.Chart',
@@ -15,8 +15,6 @@ Ext.define('CarListingApp.view.CarListings', {
     ],
 
     frame: true,
-    height: 773,
-    width: 518,
     layout: {
         align: 'stretch',
         type: 'hbox'
@@ -46,9 +44,7 @@ Ext.define('CarListingApp.view.CarListings', {
                     xtype: 'gridcolumn',
                     dataIndex: 'price',
                     text: 'Price',
-                    renderer: function(value, p, record) {
-                        return "$" + Ext.util.Format.number(value, '0,000.00');
-                    },
+                    renderer: me.globalUtils.currencyRenderer,
                     flex: 1
                 }]
             }, {

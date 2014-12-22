@@ -11,7 +11,8 @@ Ext.define("CarListingApp.view.Viewport", {
     initComponent: function() {
         Ext.applyIf(this, {
             items: [{
-				xtype : "carListings"
+				xtype : "carListings",
+				flex: 1
             }]
         });
         return this.callParent(arguments);
