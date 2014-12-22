@@ -57,7 +57,7 @@ Ext.define('CarListingApp.view.CarListings', {
                 items: [{
                     xtype: 'panel',
                     flex: 0.8,
-                    margins: '5 0 0 0',
+                    margins: '0 0 0 0',
                     itemId: 'detailPanel',
                     tpl: [
                         '<div class="car-details">',
@@ -105,10 +105,16 @@ Ext.define('CarListingApp.view.CarListings', {
                                 display: 'insideEnd',
                                 field: 'rating',
                                 color: '#333',
+                                font: '15px Helvetica, sans-serif',
                                 'text-anchor': 'middle'
                             },
                             xField: 'name',
-                            yField: 'rating'
+                            yField: 'rating',
+                            renderer: function(sprite, record, attr, index, store){
+                                return Ext.apply(attr, {
+                                    fill: '#00BBFF'
+                                });
+                            }
                         }]
                     }]
                 }]
